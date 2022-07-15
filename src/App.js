@@ -1,16 +1,19 @@
-const App = () => {
-  const now = new Date();
-  const a = 10;
-  const b = 20;
+import React from 'react'
+import { Route, BrowserRouter as Router } from 'react-router-dom'
+import Sidebar from './components/Sidebar'
 
+
+function App() {
   return (
-    <div>
-      <p>Hello world, it is {now.toString()}</p>
-      <p>
-        {a} plus {b} is {a + b}
-      </p>
-    </div>
-  );
-};
+    <>
+      <Router>
+        <Sidebar />
+        <Switch>
+          <Route path='/' />
+        </Switch>
+      </Router>
+    </>
+  )
+}
 
-export default App;
+export default App
