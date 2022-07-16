@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, BrowserRouter as Router } from 'react-router-dom'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Sidebar from './components/Sidebar'
 
 
@@ -8,9 +8,9 @@ function App() {
     <>
       <Router>
         <Sidebar />
-        <Switch>
+        <Routes>
           <Route path='/' />
-        </Switch>
+        </Routes>
       </Router>
     </>
   )
