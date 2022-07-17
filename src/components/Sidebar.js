@@ -4,6 +4,7 @@ import * as FaIcons from 'react-icons/fa'
 import * as AiIcons from 'react-icons/ai'
 import SidebarData from './SidebarData'
 import './Sidebar.css'
+import {IconContext} from 'react-icons'
 
 
 function Sidebar() {
@@ -14,6 +15,7 @@ function Sidebar() {
   const showSidebar = () => setSidebar(!sidebar)
   return (
     <>
+    <IconContext.Provider value={{color: '#fff'}}>
       <div className='navbar'>
         <Link to='#' className='menu-bars'>
           <FaIcons.FaBars onClick={showSidebar} />
@@ -38,6 +40,7 @@ function Sidebar() {
           })}
         </ul>
       </nav>
+    </IconContext.Provider>
     </>
   )
 }
